@@ -4,11 +4,9 @@ databases:
   - name: lightdash-database
     region: frankfurt
     ipAllowList: []
-    plan: free
 
 services:
   - type: web
-    plan: free
     env: docker
     region: frankfurt
     name: lightdash-server
