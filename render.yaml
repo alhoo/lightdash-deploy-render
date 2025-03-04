@@ -1,7 +1,7 @@
 previewsEnabled: false
 
 databases:
-  - name: lightdash-database
+  - name: lightdash-database-eu
     region: frankfurt
     ipAllowList: []
 
@@ -9,7 +9,7 @@ services:
   - type: web
     env: docker
     region: frankfurt
-    name: lightdash-server
+    name: lightdash-server-eu
     dockerContext: .
     dockerfilePath: dockerfile
     envVars: 
