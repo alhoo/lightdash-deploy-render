@@ -8,7 +8,7 @@ databases:
 services:
   - type: web
     env: docker
-    plan: standard
+    plan: pro
     region: frankfurt
     name: lightdash-server
     dockerContext: .
