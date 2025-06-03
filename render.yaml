@@ -1,15 +1,15 @@
 previewsEnabled: false
 
 databases:
-  - name: lightdash-database
+  - name: lightdash-database-eu
+    region: frankfurt
     ipAllowList: []
-    plan: free
 
 services:
   - type: web
-    plan: free
     env: docker
-    name: lightdash-server
+    region: frankfurt
+    name: lightdash-server-eu
     dockerContext: .
     dockerfilePath: dockerfile
     envVars: 
