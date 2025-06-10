@@ -54,19 +54,28 @@ services:
         value: "true"
 
   - type: pserv
-    env: docker
-    region: frankfurt
     name: minio-storage
+    healthCheckPath: /minio/health/live
+    region: frankfurt
+    runtime: image
     image:
-      url: bitnami/minio:latest
-    envVars:
-      - key: MINIO_ROOT_USER
-        value: "minioadmin"
-      - key: MINIO_ROOT_PASSWORD
-        value: "minioadmin"
-      - key: MINIO_DEFAULT_BUCKETS
-        value: "default"
+      url: docker.io/minio/minio:latest
+    dockerCommand: minio server /data --address $HOST:$PORT --console-address $HOST:$CONSOLE_PORT
+    autoDeploy: false
     disk:
-      name: minio-data
+      name: data
       mountPath: /data
       sizeGB: 1
+    envVars:
+    - key: MINIO_ROOT_USER
+      generateValue: true
+    - key: MINIO_ROOT_PASSWORD
+      generateValue: true
+    - key: HOST
+      value: "0.0.0.0"
+    - key: PORT
+      value: 9000
+    - key: CONSOLE_PORT
+      value: 9090
+    - key: MINIO_DEFAULT_BUCKETS
+      value: "default"
