@@ -56,6 +56,7 @@ services:
     name: minio-storage
     region: frankfurt
     runtime: image
+    port: 9000
     image:
       url: docker.io/minio/minio:latest
     dockerCommand: minio server /data --address $HOST:$PORT --console-address $HOST:$CONSOLE_PORT
