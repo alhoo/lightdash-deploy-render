@@ -15,23 +15,23 @@ services:
     envVars: 
       - key: PGHOST
         fromDatabase:
-          name: lightdash-database
+          name: lightdash-database-eu
           property: host
       - key: PGPORT
         fromDatabase:
-          name: lightdash-database
+          name: lightdash-database-eu
           property: port
       - key: PGDATABASE
         fromDatabase:
-          name: lightdash-database
+          name: lightdash-database-eu
           property: database
       - key: PGUSER
         fromDatabase:
-          name: lightdash-database
+          name: lightdash-database-eu
           property: user
       - key: PGPASSWORD
         fromDatabase:
-          name: lightdash-database
+          name: lightdash-database-eu
           property: password
       - key: TRUST_PROXY
         value: true
