@@ -49,6 +49,7 @@ services:
       - key: S3_ACCESS_KEY
         value: "minioadmin"
       - key: S3_SECRET_KEY
+        value: "miniosecret"
       - key: S3_FORCE_PATH_STYLE
         value: "true"
 
@@ -68,6 +69,7 @@ services:
     - key: MINIO_ROOT_USER
       value: "minioadmin"
     - key: MINIO_ROOT_PASSWORD
+      value: "miniosecret"
     - key: HOST
       value: "0.0.0.0"
     - key: PORT
