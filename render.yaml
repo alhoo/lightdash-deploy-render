@@ -55,7 +55,7 @@ services:
       - key: S3_FORCE_PATH_STYLE
         value: "true" # Important for MinIO
 
-  - type: private # Use private service as it's not directly exposed to the internet
+  - type: pserv # Use private service as it's not directly exposed to the internet
     env: docker
     region: frankfurt
     name: minio-storage # Name of the MinIO service
