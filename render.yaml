@@ -59,7 +59,8 @@ services:
     env: docker
     region: frankfurt
     name: minio-storage # Name of the MinIO service
-    image: bitnami/minio:latest # Use the MinIO image
+    image:
+      url: docker.io/bitnami/minio:latest # Use the MinIO image
     envVars:
       - key: MINIO_ROOT_USER
         value: "minioadmin"
@@ -67,7 +68,7 @@ services:
         value: "minioadmin"
       - key: MINIO_DEFAULT_BUCKETS
         value: "default"
-    disks: # Crucial for persistence
-      - name: minio-data
-        path: /data # MinIO's default data directory
-        sizeGB: 1 # Adjust size as needed
+    disk: # Crucial for persistence
+      name: minio-data
+      path: /data # MinIO's default data directory
+      sizeGB: 1 # Adjust size as needed
