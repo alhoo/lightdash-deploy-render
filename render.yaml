@@ -58,7 +58,7 @@ services:
     region: frankfurt
     name: minio-storage
     image:
-      url: docker.io/bitnami/minio:latest # Use the MinIO image
+      url: bitnami/minio:latest
     envVars:
       - key: MINIO_ROOT_USER
         value: "minioadmin"
