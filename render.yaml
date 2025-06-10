@@ -55,7 +55,6 @@ services:
 
   - type: pserv
     name: minio-storage
-    healthCheckPath: /minio/health/live
     region: frankfurt
     runtime: image
     image:
