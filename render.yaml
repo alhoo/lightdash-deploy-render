@@ -49,7 +49,6 @@ services:
       - key: S3_ACCESS_KEY
         value: "minioadmin"
       - key: S3_SECRET_KEY
-        value: "minioadmin"
       - key: S3_FORCE_PATH_STYLE
         value: "true"
 
@@ -67,9 +66,8 @@ services:
       sizeGB: 1
     envVars:
     - key: MINIO_ROOT_USER
-      generateValue: true
+      value: "minioadmin"
     - key: MINIO_ROOT_PASSWORD
-      generateValue: true
     - key: HOST
       value: "0.0.0.0"
     - key: PORT
