@@ -70,5 +70,5 @@ services:
         value: "default"
     disk: # Crucial for persistence
       name: minio-data
-      path: /data # MinIO's default data directory
-      sizeGB: 1 # Adjust size as needed
+      mountPath: /data
+      sizeGB: 1
