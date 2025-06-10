@@ -1,4 +1,4 @@
-FROM lightdash/lightdash:latest
+FROM lightdash/lightdash:0.1698.6
 
 ARG RENDER_EXTERNAL_URL
 
