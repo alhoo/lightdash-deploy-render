@@ -45,3 +45,7 @@ services:
         sync: false
       - key: S3_SECRET_KEY
         sync: false
+      - key: S3_ENDPOINT
+        value: s3.eu-central-1.amazonaws.com
+      - key: S3_REGION
+        sync: eu-central-1
